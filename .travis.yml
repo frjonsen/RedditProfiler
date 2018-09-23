@@ -1,16 +1,23 @@
 language: java
-
-
-# "A peculiarity of dependency caching in Gradle means that to avoid uploading the cache
-# after every build you need to add the following lines to your .travis.yml"
 before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
-
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
 jdk:
-  - openjdk8
-  - openjdk11
+- openjdk8
+- openjdk11
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: AKIAIKM5RFI536VZZCHQ
+  secret_access_key:
+    secure: xKOETWXgjoWRpNLv+INler/Jr7pUFK6Lx6vT6NtYPGukjVAlRzceVCwTVHkfCjVe7oNgmcChlrVM4NC2R5yifPKIzA3HQQJH5ve/HbN4HwBD1qruYVB+JLtt1zZrVBb418L1dBmD/4ufjkf4pxvGn15KnsVRObPpi4LKB3MpBq3SODoD7z05MNiR+DUqUR1YhV22YDouRSO5UIuOsal391HS/bW2RLyIVvOfRfHYNCi1CFD+9kUnQ7r9DP0blKMpGkUkM9Z/izza9+92I9AD4r+7Ri0mDwSbxJKASvFHVPAGNCEOSFH+y6Xy3w+h5Obcgs8Ul+70saaQgrZiM06qu50ip1M+8y3XFiX70b4wrI6We+zYYlaAOdkGi49Pd091ISLb3Za7iSmUWlS940NQ9s4oe6/1L4TUNe1HPDjZMyMH0onsav88rZNTyW+hZm27dm2xPlG/z/RRX7ZzlEoAa4jw+x4k5yWVxtu9no5asv2x8NyHT2JwpE8KDooU6IvQKPhmeifzxCctCvhIO9xyqitrG9LypsAz3ubL0VcdBVFz2OKUtovECoHWCVTnf0NqmpMFbGmr3mx/iMaJqZj0QCj0CcaObo93hh8m25DqyYiNdHax+sj3L8YOkTsbeGT28QvxM+OhN+akOPFCAiW/4d3B/S5lXsVgmzlWWOpPJ3w=
+  region: eu-west-1
+  zip_file: "build/libs/redditprofiler-0.0.1.jar"
+  app: RedditProfiler
+  env: Redditprofiler-env
+  on:
+    repo: frjonsen/RedditProfiler
+  bucket_name: "elasticbeanstalk-eu-west-1-549222465480"
