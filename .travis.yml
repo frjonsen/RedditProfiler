@@ -18,6 +18,7 @@ deploy:
   zip_file: "build/libs/redditprofiler-0.0.1.jar"
   app: RedditProfiler
   env: Redditprofiler-env
+  skip_cleanup: true
   on:
     repo: frjonsen/RedditProfiler
   bucket_name: "elasticbeanstalk-eu-west-1-549222465480"
