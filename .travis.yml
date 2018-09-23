@@ -21,4 +21,4 @@ deploy:
   skip_cleanup: true
   on:
     repo: frjonsen/RedditProfiler
-  bucket_name: "elasticbeanstalk-eu-west-1-549222465480"
+  bucket_name: redditprofiler
