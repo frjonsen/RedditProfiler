@@ -1,0 +1,11 @@
+image: java:8
+
+stages:
+  - build
+  - test
+
+build:
+  - gradlew build
+
+test:
+  - gradlew test
