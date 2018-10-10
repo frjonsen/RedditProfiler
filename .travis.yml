@@ -22,4 +22,4 @@ deploy:
   on:
     repo: frjonsen/RedditProfiler
     branch: master
-# bucket_name: elasticbeanstalk-eu-west-1-549222465480
+  bucket_name: elasticbeanstalk-eu-west-1-549222465480
