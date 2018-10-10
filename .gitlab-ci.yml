@@ -13,3 +13,12 @@ test:
   script:
     - export JAVA_OPTS=-Dfile.encoding=UTF-8
     - ./gradlew test
+
+deploy:
+  stage: deploy
+  script:
+    - apt-get install -y python3-pip
+    - pip install awsebcli
+    - eb deploy
+  only:
+    - master
