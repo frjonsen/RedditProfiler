@@ -5,7 +5,9 @@ stages:
   - test
 
 build:
-  - gradlew build
+  stage: build
+  - script: gradlew build
 
 test:
-  - gradlew test
+  stage: test
+  -script: gradlew test
