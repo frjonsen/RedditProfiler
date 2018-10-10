@@ -18,6 +18,7 @@ test:
 deploy:
   stage: deploy
   script:
+    - ./gradlew shadowJar
     - apt-get install -y python3-pip
     - pip install awsebcli
     - eb deploy
