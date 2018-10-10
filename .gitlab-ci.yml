@@ -1,4 +1,8 @@
-image: java:8
+image: openjdk:8
+
+variables:
+  GRADLE_OPTS: "-Dorg.gradle.daemon=false"
+
 
 stages:
   - build
@@ -19,7 +23,7 @@ deploy:
   stage: deploy
   script:
     - ./gradlew shadowJar
-    - apt-get install -y python-pip
+    - apt-get install -y py-pip
     - pip install awsebcli
     - eb deploy
   only:
