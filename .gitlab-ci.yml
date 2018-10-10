@@ -3,6 +3,7 @@ image: java:8
 stages:
   - build
   - test
+  - deploy
 
 build:
   stage: build
