@@ -13,8 +13,4 @@ global:
   default_platform: arn:aws:elasticbeanstalk:eu-west-1::platform/Java 8 running on
     64bit Amazon Linux/2.7.5
   default_region: eu-west-1
-  include_git_submodules: true
-  profile: eb-cli
-  repository: null
-  sc: git
   workspace_type: Application
