@@ -25,6 +25,6 @@ deploy:
     - ./gradlew shadowJar
     - apt-get update -qq && apt-get install -y -qq python-pip
     - pip install awsebcli
-    - eb deploy
+    - eb deploy Redditprofiler-group
   only:
     - master
