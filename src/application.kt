@@ -27,6 +27,10 @@ fun Application.module() {
             call.respondText("HELLO WORL!", contentType = ContentType.Text.Plain)
         }
 
+        get("/api/")  {
+            call.respondText("HELLO API", contentType = ContentType.Text.Plain)
+        }
+
         // Static feature. Try to access `/static/ktor_logo.svg`
         static("/static") {
             resources("static")
