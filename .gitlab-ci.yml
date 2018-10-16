@@ -1,4 +1,4 @@
-image: vakz:docker pull vakz/java-8-with-aws-eb
+image: vakz:vakz/java-8-with-aws-eb
 
 variables:
   GRADLE_OPTS: "-Dorg.gradle.daemon=false"
