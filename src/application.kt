@@ -9,6 +9,7 @@ import io.ktor.jackson.*
 import io.ktor.features.*
 import io.ktor.http.content.resources
 import io.ktor.http.content.static
+import io.ktor.response.respondText
 import net.dean.jraw.http.OkHttpNetworkAdapter
 import net.dean.jraw.http.UserAgent
 import net.dean.jraw.oauth.Credentials
@@ -40,6 +41,10 @@ fun Application.module() {
     reddit()
 
     routing {
+
+        get("/") {
+            call.respondText("HELLO WORLD!")
+        }
 
         // Static feature. Try to access `/static/ktor_logo.svg`
         static("/static") {
