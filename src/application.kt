@@ -24,7 +24,7 @@ fun Application.module() {
 
     routing {
         get("/") {
-            call.respondText("HELLO WORL!", contentType = ContentType.Text.Plain)
+            call.respondText("HELLO WORLD!", contentType = ContentType.Text.Plain)
         }
 
         get("/api/")  {
