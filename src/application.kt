@@ -18,7 +18,7 @@ import org.koin.dsl.module.module
 import org.koin.ktor.ext.installKoin
 import java.util.*
 
-fun main(args: Array<String>): Unit = io.ktor.server.netty.DevelopmentEngine.main(args)
+fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
 val redditModule = module {
     val config = HoconApplicationConfig(ConfigFactory.load())
