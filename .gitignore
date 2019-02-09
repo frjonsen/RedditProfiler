@@ -13,3 +13,5 @@
 !.elasticbeanstalk/*.global.yml
 
 secrets.conf
+/target
+**/*.rs.bk

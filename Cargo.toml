@@ -1,0 +1,9 @@
+[package]
+name = "reddit_profiler"
+version = "0.1.0"
+authors = ["Fredrik Jonsén <fredrikjonsen@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+chrono = "0.4"
+getset = "0.0.6"
